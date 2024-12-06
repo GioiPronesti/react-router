@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import Home from "./assets/pages/home"
+import About from "./assets/pages/about"
+import Products from "./assets/pages/products"
 
 /*
 Creiamo il frontend del nostro Blog e le sue pagine!
@@ -16,7 +18,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route></Route>
+          <Route path="/" Component={Home}></Route>
+          <Route path="/about" Component={About}></Route>
+          <Route path="/products" Component={Products}></Route>
         </Routes>
       </BrowserRouter>
       
