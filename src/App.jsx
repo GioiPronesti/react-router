@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./assets/pages/home"
-import About from "./assets/pages/about"
-import Products from "./assets/pages/products"
+import Home from "./pages/home"
+import About from "./pages/about"
+import Products from "./pages/products"
 
 /*
 Creiamo il frontend del nostro Blog e le sue pagine!
@@ -25,7 +25,7 @@ function App() {
       </BrowserRouter>
       
     </>
-  )
-}
+  ) 
+}  
 
 export default App
