@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/home"
 import About from "./pages/about"
-import PostList from "./pages/BlogPost"
 import DefaultLayout from "./layouts/DefaultLayout"
 import BlankLayout from "./layouts/BlankLayout"
 import NotFound from "./layouts/NotFound"
+import PostsIndex from './pages/PostsIndex';
 
 /*
 Creiamo il frontend del nostro Blog e le sue pagine!
@@ -20,15 +20,31 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
+        {/*<Routes>
           <Route element = {<DefaultLayout/>}> 
-            <Route path="/" Component={Home}></Route>
-            <Route path="/about" Component={About}></Route>
-            <Route path="/blog" Component={PostList}></Route>
+            <Route path="/" component={Home}></Route>
+            <Route path="/about" component={About}></Route>
+            <Route path="/blog" >
+              <Route index component={PostsIndex} ></Route>
+              <Route path=":id"></Route> 
+            <Route />
           </Route> 
           <Route element={<BlankLayout/>}>
-            <Route path='*' Component={NotFound}></Route>
+            <Route path='*' component={NotFound}></Route>
           </Route> 
+        </Routes>*/}
+        <Routes> 
+          <Route element={<DefaultLayout />}> 
+            <Route path="/" component={Home} /> 
+            <Route path="/about" component={About} /> 
+            <Route path="/blog"> 
+            <Route index component={PostsIndex} />
+              <Route path=":id" /> 
+          </Route> 
+          </Route> 
+          <Route element={<BlankLayout />}> 
+            <Route path="*" component={NotFound} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
