@@ -2,7 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/home"
 import About from "./pages/about"
 import Products from "./pages/products"
-
+import DefaultLayout from "./layouts/DefaultLayout"
+import BlankLayout from "./layouts/BlankLayout"
+import NotFound from "./layouts/NotFound"
 /*
 Creiamo il frontend del nostro Blog e le sue pagine!
 Partiamo installando React Router DOM: npm install react-router-dom
@@ -18,9 +20,14 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" Component={Home}></Route>
-          <Route path="/about" Component={About}></Route>
-          <Route path="/products" Component={Products}></Route>
+          <Route element = {<DefaultLayout/>}> 
+            <Route path="/" Component={Home}></Route>
+            <Route path="/about" Component={About}></Route>
+            <Route path="/products" Component={Products}></Route>
+          </Route> 
+          <Route element={<BlankLayout/>}>
+            <Route path='*' Component={NotFound}></Route>
+          </Route> 
         </Routes>
       </BrowserRouter>
       
