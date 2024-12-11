@@ -4,7 +4,8 @@ import About from "./pages/about"
 import DefaultLayout from "./layouts/DefaultLayout"
 import BlankLayout from "./layouts/BlankLayout"
 import NotFound from "./layouts/NotFound"
-import PostsIndex from './pages/PostsIndex';
+import PostsIndex from './pages/posts/Index.jsx';
+
 
 /*
 Creiamo il frontend del nostro Blog e le sue pagine!

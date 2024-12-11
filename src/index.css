@@ -58,6 +58,19 @@ img {
   padding: 20px 0;
 }
 
+nav .active {
+	color: #646cff;
+}
+
+.grid {
+	display: grid;
+	gap: 2rem;
+}
+
+.grid.grid-cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
 .menu{
   display: flex;
   flex-direction: row;
