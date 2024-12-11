@@ -29,7 +29,7 @@ export default function Index(){
         <section>
           <div className='container'>
             <h1 className='title'>i post del blog </h1>
-            <Link className='link' to="/pizzas/create">Nuovo post</Link>
+            <Link className='link' to="/posts/create">Nuovo post</Link>
           </div>
           <div className="container">
             <ul className='grid grid-cols-2'>

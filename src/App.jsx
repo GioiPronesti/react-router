@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import BlankLayout from "./layouts/BlankLayout"
 import NotFound from "./layouts/NotFound"
 import PostsIndex from './pages/posts/Index.jsx';
+import PostShow from "./pages/posts/Show.jsx"
 
 
 /*
@@ -39,9 +40,9 @@ function App() {
             <Route path="/" component={Home} /> 
             <Route path="/about" component={About} /> 
             <Route path="/blog"> 
-            <Route index component={PostsIndex} />
-              <Route path=":id" /> 
-          </Route> 
+              <Route index component={PostsIndex} />
+              <Route path=":id" component={PostShow}/> 
+            </Route> 
           </Route> 
           <Route element={<BlankLayout />}> 
             <Route path="*" component={NotFound} />
